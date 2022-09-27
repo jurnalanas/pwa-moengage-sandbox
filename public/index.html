@@ -34,12 +34,13 @@
         swPath: '/service-worker.js',
       })
 
-      Moengage.call_web_push()
+      // Moengage.call_web_push()
       </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <button>Call Web Push</button>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -50,6 +51,15 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <script>
+      document
+        .getElementsByTagName("button")[0]
+        .addEventListener("click", function () {
+          // this will work only when configured correct app id above.
+          Moengage.call_web_push();
+        });
+    </script>
   </body>
 
 </html>
